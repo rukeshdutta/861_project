@@ -68,7 +68,9 @@ latest_prices = prices.iloc[-1].fillna(0)
  # prices as of the day you are allocating
 da = DiscreteAllocation(weights, latest_prices, total_portfolio_value=investment_amount*1_000_000, short_ratio=0)
 alloc, leftover = da.lp_portfolio()
-st.write(f":blue[Discrete allocation performed with] :green[__$**{leftover:.2f}**__ leftover]")
+allocation_left = leftover/(investment_amount*1_000_000)
+allocation_left = '{:.2%}'.format(allocation_left)
+st.write(f":blue[Discrete allocation performed with] :green[__$**{leftover:.2f}**__ leftover]:blue[ which is] :green[{allocation_left} ]:blue[ of invested amount.]")
 final_allocation = pd.DataFrame(alloc,index=['Units']).T
 allocation_table = final_allocation.join(pd.DataFrame(latest_prices))
 allocation_table_explained = """### :blue[Buy these amount of stocks at the latest prices.]"""
