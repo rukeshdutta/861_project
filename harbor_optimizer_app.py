@@ -12,6 +12,7 @@ from pypfopt import DiscreteAllocation
 import plotly.graph_objects as go
 import plotly_express as px
 import seaborn as sns
+from datetime import timedelta
 
 # APP HEADINGS
 st.header('TEAM HARBOR')
@@ -22,8 +23,8 @@ tickers = st.multiselect('Choose Tickers you want in your portfolio',["^GSPC", "
   default=['SPY','BND','GLD','^BSESN','^N225'])
 # datefunctionalities
 default_start_date = datetime(2019, 1, 1)
-today = datetime.today()
-# value = today
+today = datetime.today() 
+daybefore_yesterday = today - timedelta(days=2)
 col1,col2 = st.columns(2)
 
 with col1:
