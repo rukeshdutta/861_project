@@ -16,7 +16,7 @@ from datetime import timedelta
 tf = pd.read_csv(r'nasdaq_screener_1711720558551.csv')
 stock_shown = tf['Symbol']
 # APP HEADINGS
-st.header('TEAM HARBOR')
+st.header('TEAM HARBOUR')
 st.subheader('PORTFOLIO OPTIMIZER')
 # USER INPUT AREAS
 tickers = st.multiselect('Choose Tickers you want in your portfolio',stock_shown,
