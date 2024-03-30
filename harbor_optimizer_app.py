@@ -20,7 +20,7 @@ st.header('TEAM HARBOR')
 st.subheader('PORTFOLIO OPTIMIZER')
 # USER INPUT AREAS
 tickers = st.multiselect('Choose Tickers you want in your portfolio',stock_shown,
-  default=['AAPL','AMZN','MSFT','JPM'])
+  default=['AAPL','AMZN','MSFT','JPM','BAC'])
 # datefunctionalities
 default_start_date = datetime(2019, 1, 1)
 today = datetime.today() 
