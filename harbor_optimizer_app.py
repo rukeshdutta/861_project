@@ -13,14 +13,14 @@ import plotly.graph_objects as go
 import plotly_express as px
 import seaborn as sns
 from datetime import timedelta
-
+tf = pd.read_csv(r'nasdaq_screener_1711720558551.csv')
+stock_shown = tf['Symbol']
 # APP HEADINGS
 st.header('TEAM HARBOR')
 st.subheader('PORTFOLIO OPTIMIZER')
 # USER INPUT AREAS
-tickers = st.multiselect('Choose Tickers you want in your portfolio',["^GSPC", "^GSPTSE", "^FTSE", "^DJI", "^N225", "^BSESN", "BND",'^BSESN','^N225','SPY',
-  "GLD", "ETH-USD", "^IXIC", "^FVX","MSFT", "AMZN", "KO", "MA", "COST", "LUV", "XOM", "PFE", "JPM", "UNH", "ACN", "DIS", "GILD", "F", "TSLA"],
-  default=['SPY','BND','GLD','^BSESN','^N225'])
+tickers = st.multiselect('Choose Tickers you want in your portfolio',stock_shown,
+  default=['AAPL','AMZN','MSFT','JPM'])
 # datefunctionalities
 default_start_date = datetime(2019, 1, 1)
 today = datetime.today() 
