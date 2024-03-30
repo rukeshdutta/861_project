@@ -23,13 +23,13 @@ tickers = st.multiselect('Choose Tickers you want in your portfolio',["^GSPC", "
 # datefunctionalities
 default_start_date = datetime(2019, 1, 1)
 today = datetime.today()
-
+# value = today
 col1,col2 = st.columns(2)
 
 with col1:
     start_date = st.date_input(label='Pick start date',value=default_start_date)
 with col2:
-    end_date = st.date_input(label='Pick end date',value=today)
+    end_date = st.date_input(label='Pick end date',value='2024-03-28')
 
 
 # col1,col2 = st.columns(2)
