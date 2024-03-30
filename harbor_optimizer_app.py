@@ -19,7 +19,7 @@ stock_shown = tf['Symbol']
 st.header('TEAM HARBOUR')
 st.subheader('PORTFOLIO OPTIMIZER')
 # USER INPUT AREAS
-tickers = st.multiselect('Choose Tickers you want in your portfolio',stock_shown,
+tickers = st.multiselect('Choose Tickers you want in your portfolio',stock_shown,help="Select at least 4",
   default=['AAPL','AMZN','MSFT','JPM','BAC'])
 # datefunctionalities
 default_start_date = datetime(2019, 1, 1)
